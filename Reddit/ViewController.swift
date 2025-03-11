@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet private weak var upperLabel: UILabel!
     
     @IBOutlet private weak var titleLabel: UILabel!
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func bookmarkButtonAction(_ sender: Any) {
         saved.toggle()
-        
+    
         if saved == true {
             bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
         }
