@@ -19,54 +19,12 @@ struct RedditPost: Codable {
     var created_utc: Double
     var domain: String
     var title: String
-    var preview: Preview?
+    var url_overridden_by_dest: String?
     var ups: Int
     var downs: Int
     var num_comments: Int
 }
 
-struct Preview: Codable {
-    var images: [PreviewImage]
-}
-
-struct PreviewImage: Codable {
-    var source: ImageSource
-}
-
-struct ImageSource: Codable {
-    var url: String
-}
-
-//struct RedditPost: Codable {
-//    var author_fullname: String
-//    var created_utc: Double
-//    var domain: String
-//    var title: String
-//    var media_metadata: [String: MediaMetadata]
-//    var ups: Int
-//    var downs: Int
-//    var num_comments: Int
-//}
-//
-//struct MediaMetadata: Codable {
-//    var status: String
-//    var e: String
-//    var m: String
-//    var p: [ImagePreview]
-//    var s: ImageSource
-//}
-//
-//struct ImagePreview: Codable {
-//    var y: Int
-//    var x: Int
-//    var u: String
-//}
-//
-//struct ImageSource: Codable {
-//    var y: Int
-//    var x: Int
-//    var u: String
-//}
 
 
 func fetchData(subreddit: String, limit: Int, after: String = "") async throws -> RedditPost? {

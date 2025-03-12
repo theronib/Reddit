@@ -48,19 +48,9 @@ class ViewController: UIViewController {
                           
                           self.commentsButton.configuration?.imagePadding = 5
                       
-  //                        if let media = post.media_metadata.first?.value {
-  //                            let imageURL = media.s.u
-  //                            print("imageURL: ", imageURL)
-  //
-  //                            Task {
-  //                                if let image = await loadImage(urlString: imageURL){
-  //                                    self.pictureView.image = image
-  //                                }
-  //                            }
-  //                        }
+
                           
-                          
-                          if let imageURL = post.preview?.images.first?.source.url {
+                          if let imageURL = post.url_overridden_by_dest {
                               print("imageURL: ", imageURL)
                               
                               Task {
